@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Contact } from "@/components/sections/Contact";
 import { RelatedPages } from "@/components/sections/RelatedPages";
+import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
@@ -21,6 +22,8 @@ export default function ContactPage() {
           </>
         }
         subtitle={`${siteConfig.displayName} vous accueille sur rendez-vous à Cocody. Téléphone, WhatsApp, Messenger ou formulaire — nous vous répondons rapidement.`}
+        image={siteImages.contact.hero}
+        imageAlt={`Accueil ${siteConfig.name} — Cocody, Abidjan`}
         breadcrumb={[{ label: "Accueil", href: routes.home }]}
       />
       <Contact showHeading={false} />

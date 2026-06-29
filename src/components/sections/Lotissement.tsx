@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionPhoto } from "@/components/ui/SectionPhoto";
 import { routes } from "@/lib/routes";
+import { siteConfig } from "@/lib/constants";
 import { siteImages } from "@/lib/images";
 import { lotissementServices, lotissements } from "@/lib/lotissements";
 
@@ -80,12 +81,7 @@ export function Lotissement({
             <h2 className="sec-title reveal d1">
               Créer des quartiers <em>d&apos;avenir</em>
             </h2>
-            <p className="lot-intro-text reveal d2">
-              BATIREM GROUP conçoit et commercialise des lotissements viabilisés sur
-              Abidjan et sa périphérie. De la découpe parcellaire à la remise des clés,
-              nous sécurisons votre investissement foncier avec des infrastructures
-              durables et des titres en règle.
-            </p>
+            <p className="lot-intro-text reveal d2">{siteConfig.company.lotissement}</p>
             <div className="lot-services reveal d3">
               {lotissementServices.map((service) => (
                 <div key={service.title} className="lot-service">

@@ -77,8 +77,8 @@ export function Header() {
         </ul>
 
         <div className="nav-right">
-          <a href={phoneHref(siteConfig.contact.phone)} className="nav-tel">
-            {siteConfig.contact.phone}
+          <a href={phoneHref(siteConfig.contact.phoneMobile)} className="nav-tel">
+            {siteConfig.contact.phoneMobile}
           </a>
           <Link href={routes.contact} className="nav-btn">
             Prendre RDV
@@ -112,11 +112,20 @@ export function Header() {
               </li>
             ))}
           </ul>
+          <Link
+            href={routes.contact}
+            className="nav-mobile-cta btn btn-gold"
+            onClick={() => setMobileOpen(false)}
+          >
+            Prendre RDV
+          </Link>
           <a
-            href={phoneHref(siteConfig.contact.phone)}
+            href={phoneHref(siteConfig.contact.phoneMobile)}
             className="nav-mobile-tel"
             onClick={() => setMobileOpen(false)}
           >
+            {siteConfig.contact.phoneMobile}
+            <br />
             {siteConfig.contact.phone}
           </a>
         </div>

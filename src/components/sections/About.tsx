@@ -18,11 +18,14 @@ export function About({ showHeading = true }: { showHeading?: boolean }) {
           </div>
           <div className="about-img-accent" />
           <div className="about-exp-badge">
-            <div className="about-exp-n">14</div>
+            <div className="about-exp-n">{siteConfig.company.locationBadge.title}</div>
             <div className="about-exp-t">
-              Années
-              <br />
-              d&apos;Excellence
+              {siteConfig.company.locationBadge.subtitle.split(" · ").map((line, i) => (
+                <span key={line}>
+                  {i > 0 ? <br /> : null}
+                  {line}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -39,18 +42,12 @@ export function About({ showHeading = true }: { showHeading?: boolean }) {
               </h2>
             </>
           ) : null}
-          <p className="about-text reveal d2">
-            Fondée en 2010 à Abidjan, {siteConfig.name} est née d&apos;une conviction : que
-            l&apos;Afrique mérite des espaces de vie et des bâtiments qui correspondent à
-            ses ambitions. Nous combinons expertise immobilière, BTP, lotissement, terrains
-            et approvisionnement en matériaux de construction premium pour offrir une
-            expérience intégrée à nos clients.
-          </p>
+          <p className="about-text reveal d2">{siteConfig.company.about}</p>
           <div className="about-pillars">
             {[
               {
-                title: "Immobilier Premium",
-                text: "Villas, appartements et terrains sélectionnés dans les quartiers les plus prisés du pays.",
+                title: "Construction & BTP",
+                text: "Réalisation de projets résidentiels et commerciaux, du gros œuvre aux finitions, sur Abidjan et en Côte d'Ivoire.",
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -60,8 +57,8 @@ export function About({ showHeading = true }: { showHeading?: boolean }) {
                 delay: "d2",
               },
               {
-                title: "Matériaux Certifiés",
-                text: "Distribution de matériaux aux normes internationales, directement importés des meilleures usines.",
+                title: "Matériaux de Bâtiment",
+                text: "Fourniture de ciment, acier, finitions et équipements pour chantiers et particuliers.",
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -71,8 +68,8 @@ export function About({ showHeading = true }: { showHeading?: boolean }) {
                 delay: "d3",
               },
               {
-                title: "Garantie & Suivi",
-                text: "Chaque projet bénéficie d'une garantie constructeur et d'un suivi post-livraison dédié.",
+                title: "Foncier & Lotissement",
+                text: "Vente de terrains, programmes de lotissement et accompagnement pour sécuriser vos acquisitions foncières.",
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -81,8 +78,8 @@ export function About({ showHeading = true }: { showHeading?: boolean }) {
                 delay: "d4",
               },
               {
-                title: "Livraison dans les Délais",
-                text: "Respect scrupuleux des calendriers avec un taux de ponctualité supérieur à 96%.",
+                title: "Accompagnement Projet",
+                text: "Un interlocuteur dédié pour vos demandes de devis, visites et suivi de chantier.",
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <circle cx="12" cy="12" r="10" />

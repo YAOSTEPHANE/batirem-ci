@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "À Propos",
-  description: `Découvrez ${siteConfig.name} — immobilier, BTP, lotissement et terrains à Abidjan depuis 2010.`,
+  description: `Découvrez ${siteConfig.name} — construction, immobilier, lotissement, terrains et matériaux à Cocody, Abidjan.`,
 };
 
 export default function AProposPage() {
@@ -24,7 +24,7 @@ export default function AProposPage() {
             Une vision <em>africaine</em> de l&apos;excellence
           </>
         }
-        subtitle={`Fondée en 2010 à Abidjan, ${siteConfig.name} accompagne particuliers, investisseurs et promoteurs avec une expertise intégrée en immobilier, foncier et matériaux de construction.`}
+        subtitle={siteConfig.company.about}
         image={siteImages.about}
         imageAlt={`Équipe ${siteConfig.name} sur un chantier à Abidjan`}
         breadcrumb={[{ label: "Accueil", href: routes.home }]}

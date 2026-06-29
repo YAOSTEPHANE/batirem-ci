@@ -2,6 +2,10 @@ export const siteImages = {
   hero: "/images/hero.jpg",
   about: "/images/about.jpg",
   whyus: "/images/whyus.jpg",
+  contact: {
+    hero: "/images/contact.jpg",
+    map: "/images/contact-map.jpg",
+  },
   properties: {
     villaEden: "/images/property-1.jpg",
     villaLumiere: "/images/property-2.jpg",

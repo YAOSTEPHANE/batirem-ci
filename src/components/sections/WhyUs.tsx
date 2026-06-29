@@ -55,9 +55,7 @@ export function WhyUs({ showHeading = true }: { showHeading?: boolean }) {
                 color: "var(--slate)",
               }}
             >
-              Chez BATIREM GROUP, nous ne nous contentons pas de vendre des biens ou des
-              matériaux — nous construisons des relations durables fondées sur la confiance,
-              la qualité et la transparence.
+              Chez {siteConfig.displayName}, {siteConfig.company.expertise}
             </p>
           </div>
           <div className="advantages">

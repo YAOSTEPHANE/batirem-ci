@@ -24,8 +24,8 @@ export default function CgvPage() {
       </p>
       <h3>Contact</h3>
       <p>
-        Pour toute question relative à une commande : {siteConfig.contact.phone} ou{" "}
-        {siteConfig.contact.email}.
+        Pour toute question relative à une commande : {siteConfig.contact.phoneMobile} ou{" "}
+        {siteConfig.contact.phone} — {siteConfig.contact.email}
       </p>
     </LegalPage>
   );

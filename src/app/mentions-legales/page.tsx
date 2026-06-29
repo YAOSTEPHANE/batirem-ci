@@ -15,7 +15,8 @@ export default function MentionsLegalesPage() {
         {siteConfig.contact.city}
       </p>
       <p>
-        Téléphone : {siteConfig.contact.phone} — Email : {siteConfig.contact.email}
+        Téléphone : {siteConfig.contact.phoneMobile} / {siteConfig.contact.phone} — Email
+        : {siteConfig.contact.email}
       </p>
       <p>
         Directeur de la publication : Emmanuel — {siteConfig.slogan}

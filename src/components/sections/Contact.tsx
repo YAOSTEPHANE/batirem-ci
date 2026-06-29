@@ -1,7 +1,10 @@
 "use client";
 
 import { handleContactSubmit } from "@/components/client/SiteEffects";
+import { FacebookIcon, MessengerIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
+import { SectionPhoto } from "@/components/ui/SectionPhoto";
 import { phoneHref, siteConfig } from "@/lib/constants";
+import { siteImages } from "@/lib/images";
 
 export function Contact({ showHeading = true }: { showHeading?: boolean }) {
   return (
@@ -73,10 +76,8 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
               </div>
             </div>
             <div className="cdet">
-              <div className="cdet-ico">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
+              <div className="cdet-ico cdet-ico--facebook">
+                <FacebookIcon size={18} />
               </div>
               <div>
                 <div className="cdet-lbl">Facebook</div>
@@ -87,6 +88,40 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
                     rel="noopener noreferrer"
                   >
                     facebook.com/batiremgroup
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="cdet">
+              <div className="cdet-ico cdet-ico--messenger">
+                <MessengerIcon size={18} />
+              </div>
+              <div>
+                <div className="cdet-lbl">Messenger</div>
+                <div className="cdet-val">
+                  <a
+                    href={siteConfig.social.messenger}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    m.me/batiremgroup
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="cdet">
+              <div className="cdet-ico cdet-ico--whatsapp">
+                <WhatsAppIcon size={18} />
+              </div>
+              <div>
+                <div className="cdet-lbl">WhatsApp</div>
+                <div className="cdet-val">
+                  <a
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {siteConfig.contact.phoneMobile}
                   </a>
                 </div>
               </div>
@@ -116,6 +151,12 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
             rel="noopener noreferrer"
             aria-label="Voir BATIREM GROUP sur Google Maps"
           >
+            <SectionPhoto
+              src={siteImages.contact.map}
+              alt={`Localisation ${siteConfig.name} — Cocody, Abidjan`}
+              sizes="400px"
+            />
+            <div className="contact-map-overlay" />
             <div className="map-pin">
               <div className="map-pin-dot" />
               <div className="map-pin-lbl">BATIREM — Cocody</div>
