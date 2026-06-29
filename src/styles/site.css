@@ -37,8 +37,8 @@
   --border:       rgba(123,0,0,.09);
   --border-l:     rgba(123,0,0,.05);
 
-  --fd: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
-  --fb: var(--font-dm-sans), 'DM Sans', system-ui, sans-serif;
+  --fd: Arial, Helvetica, sans-serif;
+  --fb: Arial, Helvetica, sans-serif;
 
   --cw:  1320px;
   --cpx: 0 40px;
@@ -1492,6 +1492,29 @@ input,textarea,select{font-family:var(--fb)}
 .legal-back{margin-top:40px;font-size:13px}
 .legal-back a{color:var(--gold);transition:opacity .2s ease}
 .legal-back a:hover{opacity:.75}
+
+/* Titres en gras */
+h1, h2, h3, h4, h5, h6,
+.sec-title,
+.hero-title,
+.quicknav-label,
+.pillar-title,
+.prop-name,
+.lot-name,
+.ter-name,
+.hpc-name,
+.lot-service-title,
+.mat-title,
+.adv-title,
+.cert-title,
+.cta-title,
+.foot-col-title,
+.foot-logo,
+.page-hero-title,
+.related-pages-title,
+.legal-content h3 {
+  font-weight: 700;
+}
 
 /* ==========================================================
    MEDIA QUERIES (basic mobile)
