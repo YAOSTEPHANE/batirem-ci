@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/layout/Logo";
 import { FacebookIcon, MessengerIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/lib/constants";
 import { routes } from "@/lib/routes";
@@ -13,13 +13,7 @@ export function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <div>
-              <Image
-                src="/images/logo.png"
-                alt={siteConfig.name}
-                width={180}
-                height={48}
-                className="foot-logo-img"
-              />
+              <Logo variant="footer" link={false} />
               <div className="foot-sub" style={{ marginTop: 3 }}>
                 {siteConfig.tagline}
               </div>

@@ -1,4 +1,7 @@
+import logoSrc from "@/assets/logo.png";
+
 export const siteImages = {
+  logo: logoSrc,
   hero: "/images/hero.jpg",
   about: "/images/about.jpg",
   whyus: "/images/whyus.jpg",

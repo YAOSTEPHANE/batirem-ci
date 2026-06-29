@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Logo } from "@/components/layout/Logo";
 import { navGroups, navLinks, phoneHref, siteConfig } from "@/lib/constants";
 import { routes } from "@/lib/routes";
 
@@ -28,16 +28,7 @@ export function Header() {
   return (
     <>
       <nav className={`nav${mobileOpen ? " nav-open" : ""}`} id="nav">
-        <Link href="/" className="nav-logo" onClick={() => setMobileOpen(false)}>
-          <Image
-            src="/images/logo.png"
-            alt={siteConfig.name}
-            width={168}
-            height={42}
-            className="nav-logo-img"
-            priority
-          />
-        </Link>
+        <Logo variant="header" priority onClick={() => setMobileOpen(false)} />
 
         <ul className="nav-links nav-links-desktop">
           {navGroups.map((item) =>
