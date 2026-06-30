@@ -9,7 +9,7 @@ export const siteConfig = {
   description:
     "Entreprise de construction, immobilier et matériaux de bâtiment à Cocody (Bonoumin), Abidjan. Projets résidentiels et commerciaux, terrains, lotissements et fourniture de matériaux en Côte d'Ivoire.",
   heroLabel: "Construction & Immobilier · Cocody, Abidjan",
-  url: "https://batirem.ci",
+  url: "https://www.batiremgroup.com",
   locale: "fr-CI",
   social: {
     facebook: "https://www.facebook.com/batiremgroup",
