@@ -3,14 +3,12 @@ import { PageHero } from "@/components/layout/PageHero";
 import { RelatedPages } from "@/components/sections/RelatedPages";
 import { Terrains } from "@/components/sections/Terrains";
 import { CtaBand } from "@/components/sections/TickerStatsCta";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Vente de Terrains",
-  description: `Terrains à vendre ${siteConfig.name} — parcelles résidentielles, commerciales et d'investissement en Côte d'Ivoire.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.terrains);
 
 export default function TerrainsPage() {
   return (

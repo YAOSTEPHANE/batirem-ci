@@ -3,14 +3,12 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Properties } from "@/components/sections/Properties";
 import { RelatedPages } from "@/components/sections/RelatedPages";
 import { CtaBand } from "@/components/sections/TickerStatsCta";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Immobilier",
-  description: `Catalogue immobilier ${siteConfig.name} — villas, appartements et résidences de prestige en Côte d'Ivoire.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.immobilier);
 
 export default function ImmobilierPage() {
   return (

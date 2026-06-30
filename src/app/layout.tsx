@@ -1,21 +1,11 @@
-import type { Metadata } from "next";
 import { SiteEffects } from "@/components/client/SiteEffects";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { siteConfig } from "@/lib/constants";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { allGlobalJsonLd, rootMetadata } from "@/lib/seo";
 import "@/styles/site.css";
 
-export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} — Immobilier & Matériaux de Construction`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
-    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
-  },
-};
+export const metadata = rootMetadata();
 
 export const viewport = {
   width: "device-width",
@@ -31,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full scroll-smooth" style={{ colorScheme: "light" }}>
       <body>
+        <JsonLd data={allGlobalJsonLd()} />
         <SiteEffects />
         <Header />
         <main>{children}</main>

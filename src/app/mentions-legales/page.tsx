@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { LegalPage, legalMeta } from "@/components/layout/LegalPage";
+import { LegalPage } from "@/components/layout/LegalPage";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = legalMeta("Mentions légales");
+export const metadata: Metadata = createPageMetadata(seoPages.mentions);
 
 export default function MentionsLegalesPage() {
   return (

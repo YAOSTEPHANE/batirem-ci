@@ -4,14 +4,12 @@ import { RelatedPages } from "@/components/sections/RelatedPages";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand, StatsBar } from "@/components/sections/TickerStatsCta";
 import { WhyUs } from "@/components/sections/WhyUs";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Expertise",
-  description: `L'expertise ${siteConfig.name} — immobilier, foncier, BTP et accompagnement personnalisé en Côte d'Ivoire.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.expertise);
 
 export default function ExpertisePage() {
   return (

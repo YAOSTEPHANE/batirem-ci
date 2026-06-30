@@ -5,14 +5,12 @@ import { RelatedPages } from "@/components/sections/RelatedPages";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand, StatsBar } from "@/components/sections/TickerStatsCta";
 import { WhyUs } from "@/components/sections/WhyUs";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "À Propos",
-  description: `Découvrez ${siteConfig.name} — construction, immobilier, lotissement, terrains et matériaux à Cocody, Abidjan.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.about);
 
 export default function AProposPage() {
   return (

@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/layout/PageHero";
 import { routes } from "@/lib/routes";
-import { siteConfig } from "@/lib/constants";
 
 interface LegalPageProps {
   title: string;
@@ -27,11 +26,4 @@ export function LegalPage({ title, children }: LegalPageProps) {
       </section>
     </>
   );
-}
-
-export function legalMeta(title: string) {
-  return {
-    title,
-    description: `${title} — ${siteConfig.name}, ${siteConfig.contact.city}.`,
-  };
 }

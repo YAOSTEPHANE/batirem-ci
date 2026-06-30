@@ -1,0 +1,30 @@
+import type { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/constants";
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: siteConfig.name,
+    short_name: siteConfig.shortName,
+    description: siteConfig.description,
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#7B0000",
+    lang: "fr-CI",
+    orientation: "portrait-primary",
+    categories: ["business", "real estate", "construction"],
+    icons: [
+      {
+        src: "/icon.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        src: "/apple-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+        purpose: "any",
+      },
+    ],
+  };
+}

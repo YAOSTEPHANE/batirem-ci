@@ -2,14 +2,12 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Contact } from "@/components/sections/Contact";
 import { RelatedPages } from "@/components/sections/RelatedPages";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contactez ${siteConfig.name} — ${siteConfig.contact.address}, ${siteConfig.contact.district}, Abidjan.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.contact);
 
 export default function ContactPage() {
   return (

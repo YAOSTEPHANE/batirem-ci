@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { SectionPhoto } from "@/components/ui/SectionPhoto";
+import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
 export type BreadcrumbItem = {
@@ -27,8 +29,16 @@ export function PageHero({
 }: PageHeroProps) {
   const crumbs: BreadcrumbItem[] = [...breadcrumb, { label }];
 
+  const breadcrumbSchema = breadcrumbJsonLd(
+    crumbs.map((crumb, i) => ({
+      name: crumb.label,
+      url: i < crumbs.length - 1 && crumb.href ? absoluteUrl(crumb.href) : undefined,
+    })),
+  );
+
   return (
     <section className="page-hero">
+      <JsonLd data={breadcrumbSchema} />
       <div className="page-hero-bg" />
       <div className="container">
         <nav className="page-breadcrumb" aria-label="Fil d'Ariane">

@@ -3,14 +3,12 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Materials } from "@/components/sections/Materials";
 import { RelatedPages } from "@/components/sections/RelatedPages";
 import { CtaBand } from "@/components/sections/TickerStatsCta";
+import { createPageMetadata, seoPages } from "@/lib/seo";
 import { siteImages } from "@/lib/images";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Matériaux de Construction",
-  description: `Matériaux BTP ${siteConfig.name} — ciment, acier, carrelage, menuiserie et livraison sur Abidjan.`,
-};
+export const metadata: Metadata = createPageMetadata(seoPages.materiaux);
 
 export default function MateriauxPage() {
   return (
